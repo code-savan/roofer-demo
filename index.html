@@ -530,6 +530,102 @@ body.has-bar{padding-bottom:0}
   .q-item{transition:none}
   .pop .fd-circle,.pop .fd-check{animation:none;stroke-dashoffset:0}
 }
+
+/* Editorial visual system */
+:root{--bg:#F8F5EF;--bg2:#F0EAE0;--card:#FFFEFA;--ink:#22231F;--ink2:#575A53;--brand:#B94E23;--brand-2:#963916;--brand-soft:#F2DDCE;--slate:#20282B;--r:14px;--r-sm:9px;--sh:0 2px 5px rgba(20,28,25,.04),0 20px 45px -32px rgba(20,28,25,.36)}
+.wrap{max-width:1280px;padding-inline:clamp(20px,4.4vw,56px)}
+.sec{padding-block:clamp(72px,9vw,124px)}
+.sec-head{max-width:850px}
+.sec-head h2{font-size:clamp(2.2rem,4.1vw,3.5rem);line-height:1.08;letter-spacing:-.035em}
+.eyebrow{font-size:11px;letter-spacing:.19em}
+.btn{border-radius:9px;min-height:49px}
+.hd{background:rgba(248,245,239,.96)}
+.hd-in{gap:clamp(14px,2vw,26px)}
+.brand-name{letter-spacing:.07em}
+.nav{gap:clamp(14px,1.85vw,27px)}
+.hero{padding-block:clamp(42px,5.5vw,78px) clamp(64px,7vw,94px);background:#F8F5EF}
+.hero::before{background:radial-gradient(600px 400px at 5% 85%,rgba(194,81,27,.05),transparent 72%)}
+.hero::after{opacity:.38}
+.hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:clamp(44px,6vw,86px)}
+.hero h1{font-size:clamp(3.1rem,5.4vw,5.5rem);line-height:1.02;letter-spacing:-.045em;margin:23px 0 23px;max-width:720px}
+.hero h1 em{text-decoration:none;font-weight:500}
+.hero-sub{font-size:clamp(17px,1.65vw,19px);max-width:600px}
+.hero-trust{max-width:630px}
+.hero-photo{height:clamp(500px,46vw,650px);margin:0;border-radius:6px 58px 6px 6px;overflow:hidden;isolation:isolate;background:#354044;box-shadow:0 32px 65px -38px rgba(16,25,24,.55)}
+.hero-photo::before{display:none}
+.hero-photo::after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(180deg,transparent,rgba(13,24,23,.16) 25%,rgba(13,24,23,.82));z-index:1;pointer-events:none}
+.hero-photo>img{width:100%;height:100%;object-fit:cover;object-position:56% center;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.hero-photo:hover>img{transform:scale(1.035)}
+.hero-photo-caption{position:absolute;z-index:2;left:clamp(23px,3vw,42px);right:clamp(23px,3vw,42px);bottom:clamp(27px,3.2vw,46px);display:flex;flex-direction:column;align-items:flex-start;color:#fff}
+.photo-overline{font:700 11px var(--sans);letter-spacing:.19em;color:#F5C8AB;margin-bottom:12px}
+.hero-photo-caption strong{font:600 clamp(2.2rem,3.3vw,3.7rem)/1.04 var(--serif);letter-spacing:-.035em}
+.hero-photo-caption a{display:inline-flex;align-items:center;gap:10px;margin-top:25px;padding-bottom:5px;border-bottom:1px solid rgba(255,255,255,.72);color:#fff;font:700 13px var(--sans);text-decoration:none}
+.hero-photo-caption a:hover{border-color:#fff;color:#F5C8AB}
+.hero-photo-caption .ic{width:16px;height:16px}
+.photo-tag{position:absolute;z-index:2;left:clamp(23px,3vw,42px);top:clamp(25px,3vw,40px);display:flex;gap:17px;align-items:center;background:rgba(248,245,239,.94);padding:9px 12px;color:#26302C;font:800 10px var(--sans);letter-spacing:.12em}
+.photo-tag span{padding-left:17px;border-left:1px solid rgba(38,48,44,.22);color:var(--brand-2)}
+.proof{background:#ECE7DE}
+.stat{padding-block:32px}
+.certs{padding-block:24px 27px}
+.svc-grid{gap:18px}
+.svc{border-radius:10px;box-shadow:none;min-height:310px}
+.svc:not(.svc-feature){padding:30px 29px;background:#FFFEFA}
+.svc:not(.svc-feature) .svc-ic{background:transparent;border:1px solid var(--rule);border-radius:8px}
+.svc-feature{padding:0;overflow:hidden;min-height:500px}
+.svc-photo{position:relative;height:235px;overflow:hidden;background:#343D3A}
+.svc-photo::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(16,25,23,.65));pointer-events:none}
+.svc-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.svc-feature:hover img{transform:scale(1.055)}
+.svc-photo span{position:absolute;z-index:1;bottom:16px;left:23px;color:#fff;font:800 11px var(--sans);letter-spacing:.15em}
+.svc-feature .svc-ic{display:none}
+.svc-feature h3{font-size:23px;margin:24px 25px 10px}
+.svc-feature p{padding:0 25px;margin:0 0 22px}
+.svc-feature .svc-link{margin:auto 25px 27px}
+.svc:not(.svc-feature) h3{font-size:22px}
+.svc:not(.svc-feature) .svc-link{margin-top:auto}
+.ins-stage{border-radius:10px}
+.cmp{border-radius:10px}
+.form-card,.info-card{border-radius:10px}
+.foot{background:#192125}
+@media (max-width:1100px){
+  .hero-grid{grid-template-columns:1fr 1fr;gap:34px}
+  .hero h1{font-size:clamp(3rem,5.2vw,4.4rem)}
+  .hero-photo{height:550px}
+}
+@media (max-width:1000px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-visual{max-width:none}
+  .hero-photo{height:min(72vw,590px);min-height:400px}
+  .svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:760px){
+  .hd{backdrop-filter:blur(16px)}
+  .hero{padding-top:40px;padding-bottom:64px}
+  .hero h1{font-size:clamp(3rem,10vw,4.8rem);max-width:660px}
+  .hero-photo{height:clamp(370px,74vw,570px);border-top-right-radius:38px}
+  .hero-trust{gap:7px 10px}
+  .stat{padding-block:22px}
+}
+@media (max-width:640px){
+  .wrap{padding-inline:20px}
+  .hero-grid{gap:32px}
+  .hero h1{font-size:clamp(2.8rem,12vw,4.3rem)}
+  .hero-sub{font-size:16.5px}
+  .hero-cta .btn{width:100%}
+  .hero-photo{height:440px;min-height:0}
+  .hero-photo-caption strong{font-size:clamp(2rem,8vw,3rem)}
+  .photo-tag{font-size:9px}
+  .svc-grid{grid-template-columns:1fr}
+  .svc-feature{min-height:0}
+  .svc-photo{height:235px}
+  .svc:not(.svc-feature){min-height:0}
+  .sec-head h2{font-size:clamp(2.15rem,9vw,3rem)}
+  .certs{gap:12px 18px}
+  .cert{font-size:11px}
+  .callbar{gap:8px}
+  .callbar .btn{font-size:13px}
+}
+@media (prefers-reduced-motion:reduce){.hero-photo>img,.svc-photo img{transition:none}}
 </style>
 </head>
 <body>
@@ -619,35 +715,15 @@ body.has-bar{padding-bottom:0}
       </div>
     </div>
 
-    <div class="hero-visual in" data-reveal="" style="--d:.14s">
-      <div class="crew-chip"><span class="dot" aria-hidden="true"></span>3 crews booking this week</div>
-      <div class="radar-card" role="img" aria-label="Demo storm feed showing recent hail reports across North Texas">
-        <div class="radar-head">
-          <span class="radar-title"><span class="dot" aria-hidden="true"></span>NORTH TX STORM FEED</span>
-          <span class="chip-demo">DEMO DATA</span>
-        </div>
-        <div class="radar" aria-hidden="true">
-          <div class="radar-sweep"></div>
-          <span class="blip b1"></span><span class="blip b2"></span><span class="blip b3"></span>
-        </div>
-        <ul class="radar-list">
-          <li><span class="rl-ic"><svg class="ic" aria-hidden="true"><use href="#i-cloud"></use></svg></span><div><b>1.75″ hail — McKinney</b><span>38 min ago · moving SE at 32 mph</span></div></li>
-          <li><span class="rl-ic"><svg class="ic" aria-hidden="true"><use href="#i-cloud"></use></svg></span><div><b>1.1″ hail — Frisco</b><span>1 hr ago · cell weakening</span></div></li>
-          <li><span class="rl-ic"><svg class="ic" aria-hidden="true"><use href="#i-bolt"></use></svg></span><div><b>70 mph gusts — Denton</b><span>2 hr ago · wind damage likely</span></div></li>
-        </ul>
-        <a class="rl-cta" href="#storm">Free post-storm inspection <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-      </div>
-      <div class="quote-float" aria-label="Customer quote">
-        <span class="stars" aria-hidden="true">
-          <svg class="ic"><use href="#i-star"></use></svg><svg class="ic"><use href="#i-star"></use></svg><svg class="ic"><use href="#i-star"></use></svg><svg class="ic"><use href="#i-star"></use></svg><svg class="ic"><use href="#i-star"></use></svg>
-        </span>
-        <div class="q-stage">
-          <div class="q-item"><p>“They found hail damage my adjuster missed — then met him on the roof to show him.”</p><span>R. Delgado · Wylie</span></div>
-          <div class="q-item show"><p>“Crew showed at 7 a.m., tarp was on by 9, and they called to check on us a week later.”</p><span>T. Okafor · Arlington</span></div>
-          <div class="q-item"><p>“One day, spotless yard, and the invoice matched the estimate to the dollar.”</p><span>M. Reyes · Frisco</span></div>
-        </div>
-      </div>
-    </div>
+    <figure class="hero-visual hero-photo in" data-reveal="" style="--d:.14s">
+      <img src="assets/texas-roof.webp" alt="Texas brick home with a charcoal shingle roof at sunset, illustrative image" width="1536" height="1024" fetchpriority="high">
+      <figcaption class="hero-photo-caption">
+        <span class="photo-overline">IRONSTAR / NORTH TEXAS</span>
+        <strong>Made for the weather.<br>Built for the home.</strong>
+        <a href="#work">See the roof difference <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      </figcaption>
+      <span class="photo-tag">ROOFING &amp; EXTERIORS <span>01 / 04</span></span>
+    </figure>
   </div>
 </section>
 
@@ -680,19 +756,22 @@ body.has-bar{padding-bottom:0}
       <p class="lede">One crew, one warranty, one number to call — from a $26 pipe boot to a full standing-seam rebuild.</p>
     </div>
     <div class="svc-grid">
-      <article class="card svc in" data-reveal="">
+      <article class="card svc svc-feature in" data-reveal="">
+        <div class="svc-photo"><img src="assets/roofing-crew.webp" alt="Roofing crew installing dark shingles, illustrative image" width="1536" height="1024" loading="lazy"><span>01 / REPLACEMENT</span></div>
         <span class="svc-ic"><svg class="ic" aria-hidden="true"><use href="#i-home"></use></svg></span>
         <h3>Roof replacement</h3>
         <p>Full tear-off and rebuild in a day on most homes. Architectural, Class 4 impact-resistant, standing-seam metal, or tile — with the decking photos to prove what's under it.</p>
         <a class="svc-link" href="#contact" data-svc="Roof replacement">Get a quote <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
       </article>
-      <article class="card svc in" data-reveal="" style="--d:.06s">
+      <article class="card svc svc-feature in" data-reveal="" style="--d:.06s">
+        <div class="svc-photo"><img src="assets/hail-inspection.webp" alt="Close inspection of hail damage on roof shingles, illustrative image" width="1536" height="1024" loading="lazy"><span>02 / STORM RESPONSE</span></div>
         <span class="svc-ic"><svg class="ic" aria-hidden="true"><use href="#i-cloud"></use></svg></span>
         <h3>Storm &amp; hail repair</h3>
         <p>Haag-certified inspections, chalked and photographed damage maps, and an adjuster meeting on your roof — not on a phone tree.</p>
         <a class="svc-link" href="#contact" data-svc="Storm or hail damage">Get a quote <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
       </article>
-      <article class="card svc in" data-reveal="" style="--d:.12s">
+      <article class="card svc svc-feature in" data-reveal="" style="--d:.12s">
+        <div class="svc-photo"><img src="assets/roof-detail.webp" alt="Charcoal shingles and copper flashing on a residential roof, illustrative image" width="1536" height="1024" loading="lazy"><span>03 / PROTECTION</span></div>
         <span class="svc-ic"><svg class="ic" aria-hidden="true"><use href="#i-bolt"></use></svg></span>
         <h3>24/7 emergency tarping</h3>
         <p>Active leak at 2 a.m.? A human answers the phone and a tarp crew rolls within hours to stop the water before the claim even starts.</p>
@@ -1159,7 +1238,7 @@ body.has-bar{padding-bottom:0}
     <div class="card form-card in" data-reveal="" style="--d:.08s">
       <div id="formWrap">
         <h3 style="margin:0 0 6px;font-size:23px">Request your free inspection</h3>
-        <p style="margin:0 0 22px;color:var(--ink2);font-size:14.5px">One form, one callback, zero obligation.</p>
+        <p style="margin:0 0 22px;color:var(--ink2);font-size:14.5px">Preview form. Requests are not sent on this demo.</p>
         <form id="quoteForm" novalidate="">
           <div class="f-row">
             <div class="field" id="wrapName">
@@ -1271,7 +1350,7 @@ body.has-bar{padding-bottom:0}
       </div>
     </div>
     <div class="foot-bot">
-      <span>© <span id="year">2026</span> IronStar Roofing &amp; Exteriors · Demo website — company, figures &amp; reviews are illustrative.</span>
+      <span>© <span id="year">2026</span> IronStar Roofing &amp; Exteriors · Demo website. Company, figures, reviews &amp; generated imagery are illustrative.</span>
       <span>
         <button type="button" data-legal="Privacy Policy">Privacy</button> ·
         <button type="button" data-legal="Terms of Service">Terms</button>
