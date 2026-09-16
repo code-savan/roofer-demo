@@ -583,6 +583,11 @@ body.has-bar{padding-bottom:0}
 .svc-feature .svc-link{margin:auto 25px 27px}
 .svc:not(.svc-feature) h3{font-size:22px}
 .svc:not(.svc-feature) .svc-link{margin-top:auto}
+.process-feature{display:grid;grid-template-columns:1.08fr .92fr;overflow:hidden;margin-top:clamp(48px,6vw,80px);background:#EDE7DC;border-radius:10px}
+.process-feature>img{width:100%;height:100%;min-height:350px;max-height:430px;object-fit:cover}
+.process-feature-copy{padding:clamp(30px,4.5vw,62px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.process-feature-copy h3{font-size:clamp(2rem,3vw,3rem);line-height:1.08;letter-spacing:-.03em;margin:16px 0}
+.process-feature-copy>p:not(.eyebrow){font-size:16px;color:var(--ink2);margin:0 0 24px;max-width:410px}
 .ins-stage{border-radius:10px}
 .cmp{border-radius:10px}
 .form-card,.info-card{border-radius:10px}
@@ -605,6 +610,8 @@ body.has-bar{padding-bottom:0}
   .hero-photo{height:clamp(370px,74vw,570px);border-top-right-radius:38px}
   .hero-trust{gap:7px 10px}
   .stat{padding-block:22px}
+  .process-feature{grid-template-columns:1fr}
+  .process-feature>img{height:300px;min-height:0}
 }
 @media (max-width:640px){
   .wrap{padding-inline:20px}
@@ -771,7 +778,7 @@ body.has-bar{padding-bottom:0}
         <a class="svc-link" href="#contact" data-svc="Storm or hail damage">Get a quote <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
       </article>
       <article class="card svc svc-feature in" data-reveal="" style="--d:.12s">
-        <div class="svc-photo"><img src="assets/roof-detail.webp" alt="Charcoal shingles and copper flashing on a residential roof, illustrative image" width="1536" height="1024" loading="lazy"><span>03 / PROTECTION</span></div>
+        <div class="svc-photo"><img src="assets/emergency-tarp.webp" alt="Roofers securing a temporary blue tarp over a storm damaged roof, illustrative image" width="1536" height="1024" loading="lazy"><span>03 / EMERGENCY</span></div>
         <span class="svc-ic"><svg class="ic" aria-hidden="true"><use href="#i-bolt"></use></svg></span>
         <h3>24/7 emergency tarping</h3>
         <p>Active leak at 2 a.m.? A human answers the phone and a tarp crew rolls within hours to stop the water before the claim even starts.</p>
@@ -1009,6 +1016,15 @@ body.has-bar{padding-bottom:0}
         <h3>Build day</h3>
         <p>Most homes done in one day. Landscaping protected, lawn magnet-swept, trailer gone by dinner.</p>
         <span class="p-chip">1-day typical build</span>
+      </div>
+    </div>
+    <div class="process-feature in" data-reveal="">
+      <img src="assets/roof-detail.webp" alt="Close view of finished shingles, flashing, and gutters, illustrative image" width="1536" height="1024" loading="lazy">
+      <div class="process-feature-copy">
+        <p class="eyebrow">The finishing standard</p>
+        <h3>The work you don't see matters most.</h3>
+        <p>Flashing, underlayment, ventilation, and the final cleanup all get the same attention as the shingles you see from the street.</p>
+        <a class="svc-link" href="#estimate">Explore your options <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
       </div>
     </div>
   </div>
