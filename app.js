@@ -59,7 +59,7 @@ function selectService(button){
     next.onload=()=>{if(request!==serviceImageRequest)return;img.src=next.src;img.alt=s.alt;requestAnimationFrame(()=>img.classList.remove("switching"));};
     next.onerror=()=>{if(request!==serviceImageRequest)return;img.src="assets/"+s.image;img.alt=s.alt;img.classList.remove("switching");};
     next.src="assets/"+s.image;
-  }
+  }else img.classList.remove("switching");
   document.querySelector("#service-tag").textContent=s.tag;
   document.querySelector("#service-name").textContent=s.name;
   document.querySelector("#service-description").textContent=s.description;
