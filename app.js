@@ -22,6 +22,26 @@ function bindComparisons(root) {
   });
 }
 renderProjects();
+const testimonialExamples=[
+  {quote:"They walked us through the damaged areas and explained which details needed attention. We knew what the plan was before anyone got on the roof.",place:"McKinney, Texas · Roof replacement"},
+  {quote:"The roof was one piece of the puzzle. They talked through the gutters and the way water moved around our home, which helped the whole project make sense.",place:"Plano, Texas · Gutters and fascia"},
+  {quote:"We appreciated seeing the progress and understanding what was happening at each step. The finished exterior feels like it belongs to our home.",place:"Dallas, Texas · Siding and trim"}
+];
+let testimonialIndex=0;
+function showTestimonial(step){
+  testimonialIndex=(testimonialIndex+step+testimonialExamples.length)%testimonialExamples.length;
+  const item=testimonialExamples[testimonialIndex], number=String(testimonialIndex+1).padStart(2,"0");
+  document.querySelector("#testimonial-quote").textContent=item.quote;
+  document.querySelector("#testimonial-place").textContent=item.place;
+  document.querySelector("#testimonial-number").textContent=number;
+  document.querySelector("#testimonial-count").textContent=number+" / 03";
+  const card=document.querySelector(".testimonial-card");
+  card.classList.remove("is-changing");
+  void card.offsetWidth;
+  if(!matchMedia("(prefers-reduced-motion: reduce)").matches)card.classList.add("is-changing");
+}
+document.querySelector("#testimonial-prev").addEventListener("click",()=>showTestimonial(-1));
+document.querySelector("#testimonial-next").addEventListener("click",()=>showTestimonial(1));
 document.querySelectorAll(".filter").forEach(button => button.addEventListener("click", () => {
   document.querySelectorAll(".filter").forEach(item => {item.classList.toggle("active",item===button);item.setAttribute("aria-pressed",String(item===button));});
   renderProjects(button.dataset.filter);
